@@ -1,0 +1,46 @@
+[gd_scene load_steps=9 format=3 uid="uid://n6g4pjjumqmc"]
+
+[ext_resource type="Script" path="res://Scripts/HandConsole.gd" id="1_5pvmt"]
+[ext_resource type="Theme" uid="uid://doadapv0h7alf" path="res://Themes/main_theme.tres" id="2_7qrit"]
+[ext_resource type="Script" path="res://Scripts/hand.gd" id="3_n7tjg"]
+[ext_resource type="PackedScene" uid="uid://0rkfkpas5cso" path="res://Scenes/Card.tscn" id="3_oc3pf"]
+[ext_resource type="Resource" uid="uid://r0sik0ipwkq7" path="res://Factions/Gothic/Cards/Archer.tres" id="5_sqrm8"]
+[ext_resource type="Resource" uid="uid://bcnhoj5466mcv" path="res://Factions/Gothic/Cards/Worker.tres" id="6_maya0"]
+[ext_resource type="Resource" uid="uid://dbt4q4wty1aip" path="res://Factions/Gothic/Cards/Town.tres" id="7_giuow"]
+[ext_resource type="Resource" uid="uid://bcaqowmfgnnob" path="res://Factions/Gothic/Cards/Soldier.tres" id="8_1mjr7"]
+
+[node name="HandConsole" type="CanvasLayer" groups=["ui_layer"]]
+script = ExtResource("1_5pvmt")
+
+[node name="Hand" type="HBoxContainer" parent="."]
+custom_minimum_size = Vector2(300, 200)
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -800.0
+offset_top = -400.0
+offset_right = 800.0
+grow_horizontal = 2
+grow_vertical = 0
+size_flags_vertical = 8
+theme = ExtResource("2_7qrit")
+alignment = 1
+script = ExtResource("3_n7tjg")
+
+[node name="Card1" parent="Hand" instance=ExtResource("3_oc3pf")]
+layout_mode = 2
+card = ExtResource("5_sqrm8")
+
+[node name="Card2" parent="Hand" instance=ExtResource("3_oc3pf")]
+layout_mode = 2
+card = ExtResource("6_maya0")
+
+[node name="Card3" parent="Hand" instance=ExtResource("3_oc3pf")]
+layout_mode = 2
+card = ExtResource("7_giuow")
+
+[node name="Card4" parent="Hand" instance=ExtResource("3_oc3pf")]
+layout_mode = 2
+card = ExtResource("8_1mjr7")

@@ -1,0 +1,17 @@
+[gd_resource type="Resource" script_class="Card" load_steps=2 format=3 uid="uid://r0sik0ipwkq7"]
+
+[ext_resource type="Script" path="res://Custom_Resources/card.gd" id="1_m6ua8"]
+
+[resource]
+script = ExtResource("1_m6ua8")
+name = "Archer"
+type = 0
+attack = 3
+defense = 1
+attack_range = 1
+cost = 2
+production = 0
+speed = 1
+sprite = "\"/Assets/Archer.png\""
+tooltip = "An Archer"
+target = 1

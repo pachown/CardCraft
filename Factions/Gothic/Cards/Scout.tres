@@ -1,0 +1,17 @@
+[gd_resource type="Resource" script_class="Card" load_steps=2 format=3 uid="uid://dbic6x7sub00e"]
+
+[ext_resource type="Script" path="res://Custom_Resources/card.gd" id="1_dxbti"]
+
+[resource]
+script = ExtResource("1_dxbti")
+name = "Scout"
+type = 0
+attack = 2
+defense = 2
+attack_range = 0
+cost = 2
+production = 0
+speed = 4
+sprite = "/Assets/Scout.png"
+tooltip = "A fast scout"
+target = 1

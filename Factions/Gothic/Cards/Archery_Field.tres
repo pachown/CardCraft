@@ -1,0 +1,17 @@
+[gd_resource type="Resource" script_class="Card" load_steps=2 format=3 uid="uid://hu0agccswa3y"]
+
+[ext_resource type="Script" path="res://Custom_Resources/card.gd" id="1_rgtxp"]
+
+[resource]
+script = ExtResource("1_rgtxp")
+name = "Archery Field"
+type = 1
+attack = 0
+defense = 0
+attack_range = 0
+cost = 2
+production = 0
+speed = 0
+sprite = "/Assets/Archery_Field.png"
+tooltip = "An archery field"
+target = 0

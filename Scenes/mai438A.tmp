@@ -1,0 +1,33 @@
+[gd_scene load_steps=5 format=3 uid="uid://fw1t8068idos"]
+
+[ext_resource type="Script" path="res://Scripts/UIControl.gd" id="1_v0ur0"]
+[ext_resource type="PackedScene" uid="uid://n6g4pjjumqmc" path="res://Scenes/HandConsole.tscn" id="2_ag3hx"]
+[ext_resource type="Texture2D" uid="uid://cgsyxme2kp1sv" path="res://Assets/TwoBases.png" id="4_vmgyy"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_4gk77"]
+size = Vector2(1920, 650)
+
+[node name="Main" type="Control"]
+layout_mode = 3
+anchors_preset = 0
+offset_right = 1920.0
+offset_bottom = 1080.0
+script = ExtResource("1_v0ur0")
+
+[node name="Log" parent="." instance=ExtResource("2_ag3hx")]
+
+[node name="HandConsole" parent="." instance=ExtResource("2_ag3hx")]
+
+[node name="CardDropArea" type="Area2D" parent="."]
+collision_layer = 2
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="CardDropArea"]
+position = Vector2(960, 325)
+shape = SubResource("RectangleShape2D_4gk77")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+modulate = Color(0.333333, 0.333333, 0.333333, 1)
+show_behind_parent = true
+scale = Vector2(3.74805, 2.1)
+texture = ExtResource("4_vmgyy")
+centered = false

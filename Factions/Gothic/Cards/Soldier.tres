@@ -1,0 +1,17 @@
+[gd_resource type="Resource" script_class="Card" load_steps=2 format=3 uid="uid://bcaqowmfgnnob"]
+
+[ext_resource type="Script" path="res://Custom_Resources/card.gd" id="1_mjivh"]
+
+[resource]
+script = ExtResource("1_mjivh")
+name = "Soldier"
+type = 0
+attack = 3
+defense = 3
+attack_range = 0
+cost = 2
+production = 0
+speed = 1
+sprite = "/Assets/Soldier.png"
+tooltip = "A solid soidier"
+target = 1

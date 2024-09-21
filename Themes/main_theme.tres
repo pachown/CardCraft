@@ -1,0 +1,7 @@
+[gd_resource type="Theme" load_steps=2 format=3 uid="uid://doadapv0h7alf"]
+
+[ext_resource type="FontFile" uid="uid://dy746rfu2opk8" path="res://Assets/MEPHISTO.TTF" id="1_di2q5"]
+
+[resource]
+default_font = ExtResource("1_di2q5")
+default_font_size = 32

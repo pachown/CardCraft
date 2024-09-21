@@ -1,0 +1,13 @@
+[gd_resource type="Resource" script_class="CardPile" load_steps=8 format=3 uid="uid://cps6qfcrxjj6u"]
+
+[ext_resource type="Resource" uid="uid://bcnhoj5466mcv" path="res://Factions/Gothic/Cards/Worker.tres" id="1_q00mu"]
+[ext_resource type="Script" path="res://Custom_Resources/card_pile.gd" id="1_qdlq8"]
+[ext_resource type="Resource" uid="uid://dbt4q4wty1aip" path="res://Factions/Gothic/Cards/Town.tres" id="2_snhcd"]
+[ext_resource type="Resource" uid="uid://dyrihvoesu571" path="res://Factions/Gothic/Cards/Stables.tres" id="3_sbnp8"]
+[ext_resource type="Resource" uid="uid://bcaqowmfgnnob" path="res://Factions/Gothic/Cards/Soldier.tres" id="4_d3suu"]
+[ext_resource type="Resource" uid="uid://dbic6x7sub00e" path="res://Factions/Gothic/Cards/Scout.tres" id="5_ued41"]
+[ext_resource type="Resource" uid="uid://hu0agccswa3y" path="res://Factions/Gothic/Cards/Archery_Field.tres" id="6_p7flb"]
+
+[resource]
+script = ExtResource("1_qdlq8")
+cards = Array[Resource("res://Custom_Resources/card.gd")]([ExtResource("1_q00mu"), ExtResource("1_q00mu"), ExtResource("2_snhcd"), ExtResource("3_sbnp8"), ExtResource("4_d3suu"), ExtResource("4_d3suu"), ExtResource("5_ued41"), ExtResource("5_ued41"), ExtResource("6_p7flb"), ExtResource("1_q00mu")])

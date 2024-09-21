@@ -1,0 +1,17 @@
+[gd_resource type="Resource" script_class="Card" load_steps=2 format=3 uid="uid://dycikhev4c11r"]
+
+[ext_resource type="Script" path="res://Custom_Resources/card.gd" id="1_6obg3"]
+
+[resource]
+script = ExtResource("1_6obg3")
+name = "Knight"
+type = 0
+attack = 4
+defense = 4
+range = 0
+cost = 3
+production = 0
+speed = 2
+sprite = "/Assets/Knight.png"
+tooltip = "A knight in shining armour"
+target = 1
