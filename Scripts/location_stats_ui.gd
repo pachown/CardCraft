@@ -7,15 +7,16 @@ var location_sprite = preload("res://Scenes/location_sprite.tscn")
 @onready var worker_container = $WorkerContainer
 
 func update_stats(stats: Stats):
+
 	for i in stats.buildings:
 		var instance = location_sprite.instantiate()
 		building_container.add_child(instance)
-		instance.texture = stats.buildings[i].Sprite
+		instance.texture = i.sprite
 	for i in stats.units:
 		var instance = location_sprite.instantiate()
-		building_container.add_child(instance)
-		instance.texture = stats.units[i].Sprite
+		unit_container.add_child(instance)
+		instance.texture = i.sprite
 	for i in stats.workers:
 		var instance = location_sprite.instantiate()
-		building_container.add_child(instance)
-		instance.texture = stats.workers[i].Sprite
+		worker_container.add_child(instance)
+		instance.texture = i.sprite

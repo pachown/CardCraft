@@ -14,5 +14,6 @@ cost = 4
 production = 0
 speed = 0
 sprite = ExtResource("2_3s8d0")
+sprite_path = "\"res://Assets/Town\""
 tooltip = "A town"
 target = 0

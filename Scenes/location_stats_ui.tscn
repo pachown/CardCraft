@@ -1,13 +1,6 @@
-[gd_scene load_steps=9 format=3 uid="uid://dut318p2cmvem"]
+[gd_scene load_steps=2 format=3 uid="uid://dut318p2cmvem"]
 
 [ext_resource type="Script" path="res://Scripts/location_stats_ui.gd" id="1_j5gk6"]
-[ext_resource type="Texture2D" uid="uid://85xre3lsxnfa" path="res://Assets/GothicArt/ArcheryField.png" id="2_6xka6"]
-[ext_resource type="PackedScene" uid="uid://bmtx6xnkkquqd" path="res://Scenes/location_sprite.tscn" id="2_nxjgs"]
-[ext_resource type="Texture2D" uid="uid://c18jlxcx5byf3" path="res://Assets/GothicArt/Stables.png" id="3_lp1w7"]
-[ext_resource type="Texture2D" uid="uid://ds4hphj2l4hio" path="res://Assets/GothicArt/Archer.png" id="4_nboga"]
-[ext_resource type="Texture2D" uid="uid://ci23ofjldgkir" path="res://Assets/GothicArt/Soldier.png" id="5_kkucc"]
-[ext_resource type="Texture2D" uid="uid://bjtqf34viegde" path="res://Assets/GothicArt/Knight.png" id="6_7xdly"]
-[ext_resource type="Texture2D" uid="uid://bmc77e4tdxd42" path="res://Assets/GothicArt/Worker.png" id="7_utr44"]
 
 [node name="LocationStatsUI" type="VBoxContainer"]
 custom_minimum_size = Vector2(50, 50)
@@ -25,72 +18,14 @@ layout_mode = 2
 theme_override_constants/separation = 1
 alignment = 1
 
-[node name="LocationSprite" parent="BuildingContainer" instance=ExtResource("2_nxjgs")]
-layout_mode = 2
-
-[node name="BuildingSprite2" type="TextureRect" parent="BuildingContainer"]
-layout_mode = 2
-texture = ExtResource("2_6xka6")
-expand_mode = 2
-
-[node name="BuildingSprite3" type="TextureRect" parent="BuildingContainer"]
-show_behind_parent = true
-layout_mode = 2
-texture = ExtResource("3_lp1w7")
-expand_mode = 3
-
 [node name="UnitContainer" type="HBoxContainer" parent="."]
 custom_minimum_size = Vector2(10, 10)
 layout_mode = 2
 theme_override_constants/separation = 1
 alignment = 1
 
-[node name="BuildingSprite1" type="TextureRect" parent="UnitContainer"]
-layout_mode = 2
-texture = ExtResource("4_nboga")
-expand_mode = 2
-
-[node name="BuildingSprite2" type="TextureRect" parent="UnitContainer"]
-layout_mode = 2
-texture = ExtResource("5_kkucc")
-expand_mode = 2
-
-[node name="BuildingSprite3" type="TextureRect" parent="UnitContainer"]
-show_behind_parent = true
-layout_mode = 2
-texture = ExtResource("6_7xdly")
-expand_mode = 3
-
 [node name="WorkerContainer" type="HBoxContainer" parent="."]
 custom_minimum_size = Vector2(9, 9)
 layout_mode = 2
 theme_override_constants/separation = 1
 alignment = 1
-
-[node name="BuildingSprite1" type="TextureRect" parent="WorkerContainer"]
-layout_mode = 2
-texture = ExtResource("7_utr44")
-expand_mode = 2
-
-[node name="BuildingSprite2" type="TextureRect" parent="WorkerContainer"]
-layout_mode = 2
-texture = ExtResource("7_utr44")
-expand_mode = 2
-
-[node name="BuildingSprite3" type="TextureRect" parent="WorkerContainer"]
-show_behind_parent = true
-layout_mode = 2
-texture = ExtResource("7_utr44")
-expand_mode = 3
-
-[node name="BuildingSprite4" type="TextureRect" parent="WorkerContainer"]
-show_behind_parent = true
-layout_mode = 2
-texture = ExtResource("7_utr44")
-expand_mode = 3
-
-[node name="BuildingSprite5" type="TextureRect" parent="WorkerContainer"]
-show_behind_parent = true
-layout_mode = 2
-texture = ExtResource("7_utr44")
-expand_mode = 3

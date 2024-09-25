@@ -4,9 +4,9 @@ extends Resource
 signal stats_changed
 
 @export var total_attack := 0
-@export var units := []
-@export var workers:= [preload("res://Factions/Gothic/Cards/Worker.tres"), preload("res://Factions/Gothic/Cards/Worker.tres")]
-@export var buildings := [preload("res://Factions/Gothic/Cards/Town.tres")]
+@export var units : Array[Card] = []
+@export var workers : Array[Card] = []
+@export var buildings: Array[Card] = []
 
 var attack = set_attack(units, true)
 
@@ -37,3 +37,8 @@ func location_death():
 	units.clear()
 	buildings.clear()
 	workers.clear()
+	
+func create_instance() -> Resource:
+	var instance: Stats = self.duplicate()
+	
+	return instance

@@ -1,5 +1,7 @@
 class_name LocationStats
 extends Stats
+var town = preload("res://Factions/Gothic/Cards/Town.tres")
+var worker = preload("res://Factions/Gothic/Cards/Worker.tres")
 #
 #@export var starting_deck: CardPile
 #@export var cards_per_turn: int
@@ -22,8 +24,8 @@ extends Stats
 #
 func create_instance() -> Resource:
 	var instance: LocationStats = self.duplicate()
-	instance.buildings = [preload("res://Factions/Gothic/Cards/Town.tres")]
-	instance.workers = [preload("res://Factions/Gothic/Cards/Worker.tres"), preload("res://Factions/Gothic/Cards/Worker.tres")]
+#	instance.buildings = [town]
+#	instance.workers = [worker, worker, worker, worker]
 #	instance.reset_gold()
 #	instance.deck = instance.starting_deck.duplicate()
 #	instance.draw_pile = CardPile.new()

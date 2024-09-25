@@ -1,13 +1,13 @@
 class_name Card
 extends Resource
 
-enum Type {Unit, Building, Strategem}
+enum Type {UNIT, BUILDING, STRATEGEM}
 
 enum Target {SELF, LOCATION, WORKER}
 
 @export_group("Card Attributes")
 @export var name: String
-@export var type: Type
+@export var type: Type 
 @export var attack: int
 @export var defense: int
 @export var attack_range: int
@@ -16,7 +16,7 @@ enum Target {SELF, LOCATION, WORKER}
 @export var speed: int
 @export var sprite: Texture
 @export var tooltip: String
-@export var target: Target
+@export var target: Target 
 
 func is_location_targeted() -> bool:
 	return target == Target.LOCATION
