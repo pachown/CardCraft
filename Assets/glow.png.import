@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://b6m4f3xc0qnc3"
-path="res://.godot/imported/Scout.png-4a98b55638e71fde14cc8ef08a4020a9.ctex"
+uid="uid://bruepe62x4vvs"
+path="res://.godot/imported/glow.png-6547006f1683d42b9553fddf409bb751.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/Scout.png"
-dest_files=["res://.godot/imported/Scout.png-4a98b55638e71fde14cc8ef08a4020a9.ctex"]
+source_file="res://Assets/glow.png"
+dest_files=["res://.godot/imported/glow.png-6547006f1683d42b9553fddf409bb751.ctex"]
 
 [params]
 

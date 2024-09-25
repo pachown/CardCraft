@@ -2,7 +2,6 @@
 
 [ext_resource type="Theme" uid="uid://doadapv0h7alf" path="res://Themes/main_theme.tres" id="1_qwv8t"]
 [ext_resource type="Script" path="res://Scripts/card_ui.gd" id="2_d4u08"]
-[ext_resource type="Texture2D" uid="uid://bbtttlwqlq4b4" path="res://Assets/Soldier.png" id="3_pbm0y"]
 [ext_resource type="Script" path="res://Scripts/card_state_machine.gd" id="4_gp0pp"]
 [ext_resource type="Script" path="res://Scripts/CardStates/card_base_state.gd" id="5_2mma7"]
 [ext_resource type="Script" path="res://Scripts/CardStates/card_clicked_state.gd" id="6_488on"]
@@ -12,6 +11,9 @@
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_ed0so"]
 size = Vector2(300, 400)
+
+[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_oji1s"]
+load_path = "res://.godot/imported/Soldier.png-c346f32c120139ce68f554ba2462b211.ctex"
 
 [node name="CardUI" type="Control" groups=["card_layer"]]
 custom_minimum_size = Vector2(300, 400)
@@ -41,7 +43,7 @@ shape = SubResource("RectangleShape2D_ed0so")
 [node name="Sprite2D" type="Sprite2D" parent="."]
 modulate = Color(0.152941, 0.458824, 0.458824, 1)
 scale = Vector2(0.585938, 0.78125)
-texture = ExtResource("3_pbm0y")
+texture = SubResource("CompressedTexture2D_oji1s")
 centered = false
 
 [node name="TextContainer" type="VBoxContainer" parent="."]

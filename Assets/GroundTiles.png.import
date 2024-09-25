@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://bjtqf34viegde"
-path="res://.godot/imported/Knight.png-2b45a527254c8a9f0312a5cf52a36055.ctex"
+uid="uid://bv4ela6rxnqqm"
+path="res://.godot/imported/GroundTiles.png-fec9896d7ff813fb40222be409e92b25.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/Knight.png"
-dest_files=["res://.godot/imported/Knight.png-2b45a527254c8a9f0312a5cf52a36055.ctex"]
+source_file="res://Assets/GroundTiles.png"
+dest_files=["res://.godot/imported/GroundTiles.png-fec9896d7ff813fb40222be409e92b25.ctex"]
 
 [params]
 

@@ -1,6 +1,7 @@
-[gd_resource type="Resource" script_class="Card" load_steps=2 format=3 uid="uid://dbic6x7sub00e"]
+[gd_resource type="Resource" script_class="Card" load_steps=3 format=3 uid="uid://dbic6x7sub00e"]
 
 [ext_resource type="Script" path="res://Custom_Resources/card.gd" id="1_dxbti"]
+[ext_resource type="Texture2D" uid="uid://b6m4f3xc0qnc3" path="res://Assets/GothicArt/Scout.png" id="2_7qgww"]
 
 [resource]
 script = ExtResource("1_dxbti")
@@ -12,6 +13,6 @@ attack_range = 0
 cost = 2
 production = 0
 speed = 4
-sprite = "/Assets/Scout.png"
+sprite = ExtResource("2_7qgww")
 tooltip = "A fast scout"
 target = 1

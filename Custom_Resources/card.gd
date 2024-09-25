@@ -14,7 +14,7 @@ enum Target {SELF, LOCATION, WORKER}
 @export var cost: int
 @export var production: int
 @export var speed: int
-@export var sprite: String
+@export var sprite: Texture
 @export var tooltip: String
 @export var target: Target
 

@@ -1,0 +1,7 @@
+[gd_scene load_steps=2 format=3 uid="uid://bmtx6xnkkquqd"]
+
+[ext_resource type="Texture2D" uid="uid://5eucyve4onis" path="res://Assets/GothicArt/Town.png" id="1_fb820"]
+
+[node name="LocationSprite" type="TextureRect"]
+texture = ExtResource("1_fb820")
+expand_mode = 2

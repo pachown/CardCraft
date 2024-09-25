@@ -1,6 +1,7 @@
-[gd_resource type="Resource" script_class="Card" load_steps=2 format=3 uid="uid://bcnhoj5466mcv"]
+[gd_resource type="Resource" script_class="Card" load_steps=3 format=3 uid="uid://bcnhoj5466mcv"]
 
 [ext_resource type="Script" path="res://Custom_Resources/card.gd" id="1_f5ctu"]
+[ext_resource type="Texture2D" uid="uid://bmc77e4tdxd42" path="res://Assets/GothicArt/Worker.png" id="2_5mxno"]
 
 [resource]
 script = ExtResource("1_f5ctu")
@@ -12,6 +13,6 @@ attack_range = 0
 cost = 1
 production = 1
 speed = 1
-sprite = "/Assets/Worker.png"
+sprite = ExtResource("2_5mxno")
 tooltip = "A worker "
 target = 2

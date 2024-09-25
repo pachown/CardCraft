@@ -15,6 +15,6 @@ func add_cards(cards):
 		textContainer.get_node("Cost").text = "Cost: " + str(cards[i].cost)
 		textContainer.get_node("Production").text = "Production: " + str(cards[i].production)
 		textContainer.get_node("Speed").text = "Speed: " + str(cards[i].speed)
-		card.get_node("Sprite2D").texture = load("res://" + cards[i].sprite)
+#		card.get_node("Sprite2D").texture = load("res://" + cards[i].sprite)
 #		card.get_node("Description").text = "Description: " + cards[i].description
 		

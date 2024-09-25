@@ -2,26 +2,14 @@ class_name Stats
 extends Resource
 
 signal stats_changed
-#should I even have a defense stat? calculating attack vs attack is 
-#easier and simpler to understand
-@export var total_defense := 2
-@export var total_attack := 2
-@export var units := []
-@export var workers:= []
-@export var buildings := []
 
-var defense = set_defense(units, true)
+@export var total_attack := 0
+@export var units := []
+@export var workers:= [preload("res://Factions/Gothic/Cards/Worker.tres"), preload("res://Factions/Gothic/Cards/Worker.tres")]
+@export var buildings := [preload("res://Factions/Gothic/Cards/Town.tres")]
+
 var attack = set_attack(units, true)
 
-func set_defense(u, home):
-	var def_calc = 0
-	if home:
-		def_calc += 2
-	for i in u:
-		def_calc += u[i].defense
-	attack = def_calc
-	stats_changed.emit()
-	
 func set_attack(u, home):
 	var att_calc = 0
 	if home:
@@ -33,20 +21,17 @@ func set_attack(u, home):
 	
 func fight(attackers):
 	var attackers_att = 0
-	var attackers_def = 0
 	for i in attackers:
 		attackers_att += attackers[i].Attack
-		attackers_def += attackers[i].Defense
 	if attackers_att <= 2:
 		attackers.clear()
 		return
-	if attackers_att > defense:
+	if attackers_att > attack:
 		location_death()
 	calculate_losses(attackers, units)
 
 func calculate_losses(enemyUnits, friendlyUnits):
-		var defense_cost = 2
-	
+		var defense_advantage = 2
 
 func location_death():
 	units.clear()

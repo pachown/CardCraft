@@ -1,6 +1,7 @@
-[gd_resource type="Resource" script_class="Card" load_steps=2 format=3 uid="uid://r0sik0ipwkq7"]
+[gd_resource type="Resource" script_class="Card" load_steps=3 format=3 uid="uid://r0sik0ipwkq7"]
 
 [ext_resource type="Script" path="res://Custom_Resources/card.gd" id="1_m6ua8"]
+[ext_resource type="Texture2D" uid="uid://ds4hphj2l4hio" path="res://Assets/GothicArt/Archer.png" id="2_c5dse"]
 
 [resource]
 script = ExtResource("1_m6ua8")
@@ -12,6 +13,6 @@ attack_range = 1
 cost = 2
 production = 0
 speed = 1
-sprite = "\"/Assets/Archer.png\""
+sprite = ExtResource("2_c5dse")
 tooltip = "An Archer"
 target = 1

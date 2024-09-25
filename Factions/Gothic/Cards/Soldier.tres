@@ -1,6 +1,7 @@
-[gd_resource type="Resource" script_class="Card" load_steps=2 format=3 uid="uid://bcaqowmfgnnob"]
+[gd_resource type="Resource" script_class="Card" load_steps=3 format=3 uid="uid://bcaqowmfgnnob"]
 
 [ext_resource type="Script" path="res://Custom_Resources/card.gd" id="1_mjivh"]
+[ext_resource type="Texture2D" uid="uid://ci23ofjldgkir" path="res://Assets/GothicArt/Soldier.png" id="2_flgdh"]
 
 [resource]
 script = ExtResource("1_mjivh")
@@ -12,6 +13,6 @@ attack_range = 0
 cost = 2
 production = 0
 speed = 1
-sprite = "/Assets/Soldier.png"
+sprite = ExtResource("2_flgdh")
 tooltip = "A solid soidier"
 target = 1
