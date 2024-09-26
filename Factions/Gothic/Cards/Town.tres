@@ -1,6 +1,7 @@
-[gd_resource type="Resource" script_class="Card" load_steps=2 format=3 uid="uid://dbt4q4wty1aip"]
+[gd_resource type="Resource" script_class="Card" load_steps=3 format=3 uid="uid://dbt4q4wty1aip"]
 
 [ext_resource type="Script" path="res://Custom_Resources/card.gd" id="1_1q71q"]
+[ext_resource type="Texture2D" uid="uid://5eucyve4onis" path="res://Assets/GothicArt/Town.png" id="2_3s8d0"]
 
 [resource]
 script = ExtResource("1_1q71q")
@@ -12,6 +13,8 @@ attack_range = 0
 cost = 4
 production = 0
 speed = 0
-sprite = "/Assets/Town.png"
+sprite = ExtResource("2_3s8d0")
 tooltip = "A town"
 target = 0
+owner = "Player"
+tooltip_text = ""

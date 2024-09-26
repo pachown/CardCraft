@@ -1,0 +1,51 @@
+[gd_scene load_steps=3 format=3 uid="uid://dut318p2cmvem"]
+
+[ext_resource type="Script" path="res://Scripts/location_stats_ui.gd" id="1_wjq4m"]
+[ext_resource type="PackedScene" uid="uid://bmtx6xnkkquqd" path="res://Scenes/Locations/location_sprite.tscn" id="2_dhtc4"]
+
+[node name="LocationStatsUI" type="VBoxContainer"]
+custom_minimum_size = Vector2(50, 50)
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+alignment = 1
+script = ExtResource("1_wjq4m")
+
+[node name="BuildingContainer" type="HBoxContainer" parent="."]
+custom_minimum_size = Vector2(10, 10)
+layout_mode = 2
+mouse_filter = 2
+theme_override_constants/separation = 1
+alignment = 1
+
+[node name="LocationSprite" parent="BuildingContainer" instance=ExtResource("2_dhtc4")]
+layout_mode = 2
+
+[node name="LocationSprite2" parent="BuildingContainer" instance=ExtResource("2_dhtc4")]
+layout_mode = 2
+
+[node name="UnitContainer" type="HBoxContainer" parent="."]
+custom_minimum_size = Vector2(10, 10)
+layout_mode = 2
+mouse_filter = 2
+theme_override_constants/separation = 1
+alignment = 1
+
+[node name="LocationSprite2" parent="UnitContainer" instance=ExtResource("2_dhtc4")]
+layout_mode = 2
+
+[node name="LocationSprite3" parent="UnitContainer" instance=ExtResource("2_dhtc4")]
+layout_mode = 2
+
+[node name="WorkerContainer" type="HBoxContainer" parent="."]
+custom_minimum_size = Vector2(9, 9)
+layout_mode = 2
+mouse_filter = 2
+theme_override_constants/separation = 1
+alignment = 1
+
+[node name="LocationSprite2" parent="WorkerContainer" instance=ExtResource("2_dhtc4")]
+layout_mode = 2

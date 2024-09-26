@@ -1,5 +1,5 @@
 extends Node
-@onready var Cards = preload("res://Scripts/Cards.gd").new()
+#@onready var Cards = preload("res://Scripts/Cards.gd").new()
 @onready var hand_console = $HandConsole
 
 var playerState = {
@@ -16,43 +16,43 @@ var playerState = {
 	"hand": [],
 	"deck": []
 }
-
-func _ready():
-	start_turn()
-
-func start_turn():
-	create_deck(playerState)
-	draw_hand(playerState.deck)
-	gold_change(playerState.workers)
-
-func create_deck(state):
-	var cards = Cards.cards
-	var startingDeck = [cards.building.stables, cards.building.town, cards.unit.worker, cards.unit.worker, cards.unit.worker, cards.unit.soldier, cards.unit.soldier, cards.unit.soldier, cards.unit.scout, cards.unit.scout]
-	for i in state.stables:
-		startingDeck.append(cards.unit.knight)
-		startingDeck.append(cards.unit.knight)
-	for i in state.expansions:
-		startingDeck.append(cards.unit.worker)
-		startingDeck.append(cards.unit.worker)
-	#remove workers from deck if max workers achieved
-	if state.workers >= state.worker_max:
-		for i in startingDeck:
-			if startingDeck.name == "Worker":
-				startingDeck.remove(i)
-	playerState.deck = startingDeck
-
-func draw_hand(d):
-	#randomize the seed
-	randomize()
-	d.shuffle()
-	var hand = d.slice(0, playerState.hand_max)
-	playerState.hand = hand
-	hand_console.add_cards(hand)
-
-func gold_change(num):
-	playerState.gold += num
-	print("Gold: " + str(num))
-	
+#
+#func _ready():
+#	start_turn()
+#
+#func start_turn():
+#	create_deck(playerState)
+#	draw_hand(playerState.deck)
+#	gold_change(playerState.workers)
+#
+#func create_deck(state):
+#	var cards = Cards.cards
+#	var startingDeck = [cards.building.stables, cards.building.town, cards.unit.worker, cards.unit.worker, cards.unit.worker, cards.unit.soldier, cards.unit.soldier, cards.unit.soldier, cards.unit.scout, cards.unit.scout]
+#	for i in state.stables:
+#		startingDeck.append(cards.unit.knight)
+#		startingDeck.append(cards.unit.knight)
+#	for i in state.expansions:
+#		startingDeck.append(cards.unit.worker)
+#		startingDeck.append(cards.unit.worker)
+#	#remove workers from deck if max workers achieved
+#	if state.workers >= state.worker_max:
+#		for i in startingDeck:
+#			if startingDeck.name == "Worker":
+#				startingDeck.remove(i)
+#	playerState.deck = startingDeck
+#
+#func draw_hand(d):
+#	#randomize the seed
+#	randomize()
+#	d.shuffle()
+#	var hand = d.slice(0, playerState.hand_max)
+#	playerState.hand = hand
+#	hand_console.add_cards(hand)
+#
+#func gold_change(num):
+#	playerState.gold += num
+#
+#
 
 	
 

@@ -1,6 +1,7 @@
-[gd_resource type="Resource" script_class="Card" load_steps=2 format=3 uid="uid://dyrihvoesu571"]
+[gd_resource type="Resource" script_class="Card" load_steps=3 format=3 uid="uid://dyrihvoesu571"]
 
 [ext_resource type="Script" path="res://Custom_Resources/card.gd" id="1_g2p4i"]
+[ext_resource type="Texture2D" uid="uid://c18jlxcx5byf3" path="res://Assets/GothicArt/Stables.png" id="2_txpm7"]
 
 [resource]
 script = ExtResource("1_g2p4i")
@@ -12,6 +13,8 @@ attack_range = 0
 cost = 3
 production = 0
 speed = 0
-sprite = "/Assets/Stables.png"
+sprite = ExtResource("2_txpm7")
 tooltip = "A stables fit for two horses"
 target = 0
+owner = "Player"
+tooltip_text = ""

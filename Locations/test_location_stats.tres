@@ -1,0 +1,10 @@
+[gd_resource type="Resource" script_class="LocationStats" load_steps=2 format=3 uid="uid://b24ro6g0n3g35"]
+
+[ext_resource type="Script" path="res://Custom_Resources/location_stats.gd" id="2_02183"]
+
+[resource]
+script = ExtResource("2_02183")
+total_attack = 0
+units = Array[Resource("res://Custom_Resources/card.gd")]([])
+workers = Array[Resource("res://Custom_Resources/card.gd")]([])
+buildings = Array[Resource("res://Custom_Resources/card.gd")]([])

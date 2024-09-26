@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://37khi36at6fv"
-path="res://.godot/imported/TownHall.png-bc0474b5c0864b57e96c1ca96c315f7c.ctex"
+uid="uid://b6m4f3xc0qnc3"
+path="res://.godot/imported/Scout.png-f94bc3e36c999974a984d099d1a27059.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/TownHall.png"
-dest_files=["res://.godot/imported/TownHall.png-bc0474b5c0864b57e96c1ca96c315f7c.ctex"]
+source_file="res://Assets/GothicArt/Scout.png"
+dest_files=["res://.godot/imported/Scout.png-f94bc3e36c999974a984d099d1a27059.ctex"]
 
 [params]
 

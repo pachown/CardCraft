@@ -1,0 +1,148 @@
+[gd_scene load_steps=4 format=3 uid="uid://cwoaxu7td82pi"]
+
+[ext_resource type="Theme" uid="uid://doadapv0h7alf" path="res://Themes/main_theme.tres" id="1_o50xs"]
+[ext_resource type="PackedScene" uid="uid://d01v84dw782tt" path="res://Scenes/Locations/Location.tscn" id="2_77rbu"]
+[ext_resource type="Resource" uid="uid://py7sfdv08bhw" path="res://Locations/main_base.tres" id="3_yb177"]
+
+[node name="Board" type="Control"]
+layout_mode = 3
+anchors_preset = 0
+theme = ExtResource("1_o50xs")
+
+[node name="BoardContainer" type="VBoxContainer" parent="."]
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="Row1" type="HBoxContainer" parent="BoardContainer"]
+layout_mode = 2
+
+[node name="Location1" parent="BoardContainer/Row1" instance=ExtResource("2_77rbu")]
+layout_mode = 2
+location_stats = ExtResource("3_yb177")
+
+[node name="Location2" parent="BoardContainer/Row1" instance=ExtResource("2_77rbu")]
+layout_mode = 2
+
+[node name="Location3" parent="BoardContainer/Row1" instance=ExtResource("2_77rbu")]
+layout_mode = 2
+
+[node name="Location4" parent="BoardContainer/Row1" instance=ExtResource("2_77rbu")]
+layout_mode = 2
+
+[node name="Location5" parent="BoardContainer/Row1" instance=ExtResource("2_77rbu")]
+layout_mode = 2
+
+[node name="Location6" parent="BoardContainer/Row1" instance=ExtResource("2_77rbu")]
+layout_mode = 2
+
+[node name="Location7" parent="BoardContainer/Row1" instance=ExtResource("2_77rbu")]
+layout_mode = 2
+
+[node name="Location8" parent="BoardContainer/Row1" instance=ExtResource("2_77rbu")]
+layout_mode = 2
+
+[node name="Location9" parent="BoardContainer/Row1" instance=ExtResource("2_77rbu")]
+layout_mode = 2
+
+[node name="Location10" parent="BoardContainer/Row1" instance=ExtResource("2_77rbu")]
+layout_mode = 2
+
+[node name="Row2" type="HBoxContainer" parent="BoardContainer"]
+layout_mode = 2
+
+[node name="Location1" parent="BoardContainer/Row2" instance=ExtResource("2_77rbu")]
+layout_mode = 2
+
+[node name="Location2" parent="BoardContainer/Row2" instance=ExtResource("2_77rbu")]
+layout_mode = 2
+
+[node name="Location3" parent="BoardContainer/Row2" instance=ExtResource("2_77rbu")]
+layout_mode = 2
+
+[node name="Location4" parent="BoardContainer/Row2" instance=ExtResource("2_77rbu")]
+layout_mode = 2
+
+[node name="Location5" parent="BoardContainer/Row2" instance=ExtResource("2_77rbu")]
+layout_mode = 2
+
+[node name="Location6" parent="BoardContainer/Row2" instance=ExtResource("2_77rbu")]
+layout_mode = 2
+
+[node name="Location7" parent="BoardContainer/Row2" instance=ExtResource("2_77rbu")]
+layout_mode = 2
+
+[node name="Location8" parent="BoardContainer/Row2" instance=ExtResource("2_77rbu")]
+layout_mode = 2
+
+[node name="Location9" parent="BoardContainer/Row2" instance=ExtResource("2_77rbu")]
+layout_mode = 2
+
+[node name="Location10" parent="BoardContainer/Row2" instance=ExtResource("2_77rbu")]
+layout_mode = 2
+
+[node name="Row3" type="HBoxContainer" parent="BoardContainer"]
+layout_mode = 2
+
+[node name="Location1" parent="BoardContainer/Row3" instance=ExtResource("2_77rbu")]
+layout_mode = 2
+
+[node name="Location2" parent="BoardContainer/Row3" instance=ExtResource("2_77rbu")]
+layout_mode = 2
+
+[node name="Location3" parent="BoardContainer/Row3" instance=ExtResource("2_77rbu")]
+layout_mode = 2
+
+[node name="Location4" parent="BoardContainer/Row3" instance=ExtResource("2_77rbu")]
+layout_mode = 2
+
+[node name="Location5" parent="BoardContainer/Row3" instance=ExtResource("2_77rbu")]
+layout_mode = 2
+
+[node name="Location6" parent="BoardContainer/Row3" instance=ExtResource("2_77rbu")]
+layout_mode = 2
+
+[node name="Location7" parent="BoardContainer/Row3" instance=ExtResource("2_77rbu")]
+layout_mode = 2
+
+[node name="Location8" parent="BoardContainer/Row3" instance=ExtResource("2_77rbu")]
+layout_mode = 2
+
+[node name="Location9" parent="BoardContainer/Row3" instance=ExtResource("2_77rbu")]
+layout_mode = 2
+
+[node name="Location10" parent="BoardContainer/Row3" instance=ExtResource("2_77rbu")]
+layout_mode = 2
+
+[node name="Row4" type="HBoxContainer" parent="BoardContainer"]
+layout_mode = 2
+
+[node name="Location1" parent="BoardContainer/Row4" instance=ExtResource("2_77rbu")]
+layout_mode = 2
+
+[node name="Location2" parent="BoardContainer/Row4" instance=ExtResource("2_77rbu")]
+layout_mode = 2
+
+[node name="Location3" parent="BoardContainer/Row4" instance=ExtResource("2_77rbu")]
+layout_mode = 2
+
+[node name="Location4" parent="BoardContainer/Row4" instance=ExtResource("2_77rbu")]
+layout_mode = 2
+
+[node name="Location5" parent="BoardContainer/Row4" instance=ExtResource("2_77rbu")]
+layout_mode = 2
+
+[node name="Location6" parent="BoardContainer/Row4" instance=ExtResource("2_77rbu")]
+layout_mode = 2
+
+[node name="Location7" parent="BoardContainer/Row4" instance=ExtResource("2_77rbu")]
+layout_mode = 2
+
+[node name="Location8" parent="BoardContainer/Row4" instance=ExtResource("2_77rbu")]
+layout_mode = 2
+
+[node name="Location9" parent="BoardContainer/Row4" instance=ExtResource("2_77rbu")]
+layout_mode = 2
+
+[node name="Location10" parent="BoardContainer/Row4" instance=ExtResource("2_77rbu")]
+layout_mode = 2

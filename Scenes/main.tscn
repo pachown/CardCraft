@@ -1,13 +1,11 @@
 [gd_scene load_steps=8 format=3 uid="uid://fw1t8068idos"]
 
-[ext_resource type="Script" path="res://Scripts/UIControl.gd" id="1_v0ur0"]
-[ext_resource type="PackedScene" uid="uid://n6g4pjjumqmc" path="res://Scenes/HandConsole.tscn" id="2_ag3hx"]
-[ext_resource type="Texture2D" uid="uid://cgsyxme2kp1sv" path="res://Assets/TwoBasesBackground.png" id="3_vas50"]
-[ext_resource type="Texture2D" uid="uid://37khi36at6fv" path="res://Assets/TownHall.png" id="4_hmk4v"]
-[ext_resource type="PackedScene" uid="uid://d2fxikhqf4kp7" path="res://Scenes/Card_Target_Selector/card_target_selector.tscn" id="5_kvlfl"]
-
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_h6r8x"]
-size = Vector2(155, 153)
+[ext_resource type="Script" path="res://Scripts/UIControl.gd" id="1_kmm31"]
+[ext_resource type="Texture2D" uid="uid://cgsyxme2kp1sv" path="res://Assets/TwoBasesBackground.png" id="2_ulep4"]
+[ext_resource type="PackedScene" uid="uid://n6g4pjjumqmc" path="res://Scenes/HandConsole.tscn" id="3_62vhj"]
+[ext_resource type="PackedScene" uid="uid://d2fxikhqf4kp7" path="res://Scenes/Card_Target_Selector/card_target_selector.tscn" id="5_k71a1"]
+[ext_resource type="PackedScene" uid="uid://c4njpb4non5kj" path="res://Scenes/gold_ui.tscn" id="6_hgfw8"]
+[ext_resource type="PackedScene" uid="uid://cwoaxu7td82pi" path="res://Scenes/Locations/Board.tscn" id="6_yw4yf"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_4gk77"]
 size = Vector2(1920, 650)
@@ -17,41 +15,18 @@ layout_mode = 3
 anchors_preset = 0
 offset_right = 1920.0
 offset_bottom = 1080.0
-script = ExtResource("1_v0ur0")
+script = ExtResource("1_kmm31")
 
 [node name="Background" type="Sprite2D" parent="."]
 modulate = Color(0.333333, 0.333333, 0.333333, 1)
 show_behind_parent = true
 light_mask = 0
+z_index = -2
 scale = Vector2(3.74805, 2.1)
-texture = ExtResource("3_vas50")
+texture = ExtResource("2_ulep4")
 centered = false
 
-[node name="HandConsole" parent="." instance=ExtResource("2_ag3hx")]
-
-[node name="Location" type="Area2D" parent="."]
-position = Vector2(1697, 181)
-collision_layer = 4
-
-[node name="Sprite2D" type="Sprite2D" parent="Location"]
-scale = Vector2(0.3, 0.3)
-texture = ExtResource("4_hmk4v")
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Location"]
-position = Vector2(-0.5, 0.5)
-shape = SubResource("RectangleShape2D_h6r8x")
-
-[node name="Location2" type="Area2D" parent="."]
-position = Vector2(301, 199)
-collision_layer = 4
-
-[node name="Sprite2D" type="Sprite2D" parent="Location2"]
-scale = Vector2(0.3, 0.3)
-texture = ExtResource("4_hmk4v")
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Location2"]
-position = Vector2(-0.5, 0.5)
-shape = SubResource("RectangleShape2D_h6r8x")
+[node name="HandConsole" parent="." instance=ExtResource("3_62vhj")]
 
 [node name="CardDropArea" type="Area2D" parent="."]
 collision_layer = 2
@@ -61,4 +36,19 @@ modulate = Color(1, 1, 1, 0.172549)
 position = Vector2(960, 325)
 shape = SubResource("RectangleShape2D_4gk77")
 
-[node name="CardTargetSelector" parent="." instance=ExtResource("5_kvlfl")]
+[node name="CardTargetSelector" parent="." instance=ExtResource("5_k71a1")]
+
+[node name="Board" parent="." instance=ExtResource("6_yw4yf")]
+layout_mode = 1
+offset_left = 419.0
+offset_top = 89.0
+offset_right = 419.0
+offset_bottom = 89.0
+scale = Vector2(2, 2)
+
+[node name="GoldUI" parent="." instance=ExtResource("6_hgfw8")]
+layout_mode = 1
+offset_left = 60.0
+offset_top = -336.0
+offset_right = 286.0
+offset_bottom = -118.0

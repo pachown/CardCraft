@@ -1,0 +1,15 @@
+[gd_resource type="Resource" script_class="LocationStats" load_steps=7 format=3 uid="uid://py7sfdv08bhw"]
+
+[ext_resource type="Script" path="res://Custom_Resources/location_stats.gd" id="1_3ggue"]
+[ext_resource type="Resource" uid="uid://dbt4q4wty1aip" path="res://Factions/Gothic/Cards/Town.tres" id="1_22fy1"]
+[ext_resource type="Resource" uid="uid://dyrihvoesu571" path="res://Factions/Gothic/Cards/Stables.tres" id="2_k2n3o"]
+[ext_resource type="Resource" uid="uid://bcaqowmfgnnob" path="res://Factions/Gothic/Cards/Soldier.tres" id="4_rbprt"]
+[ext_resource type="Resource" uid="uid://dycikhev4c11r" path="res://Factions/Gothic/Cards/Knight.tres" id="5_n5i1p"]
+[ext_resource type="Resource" uid="uid://bcnhoj5466mcv" path="res://Factions/Gothic/Cards/Worker.tres" id="6_l4enm"]
+
+[resource]
+script = ExtResource("1_3ggue")
+total_attack = 15
+units = Array[Resource("res://Custom_Resources/card.gd")]([ExtResource("4_rbprt"), ExtResource("4_rbprt"), ExtResource("5_n5i1p")])
+workers = Array[Resource("res://Custom_Resources/card.gd")]([ExtResource("6_l4enm"), ExtResource("6_l4enm"), ExtResource("6_l4enm")])
+buildings = Array[Resource("res://Custom_Resources/card.gd")]([ExtResource("1_22fy1"), ExtResource("2_k2n3o")])
