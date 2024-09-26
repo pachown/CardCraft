@@ -4,8 +4,8 @@
 [ext_resource type="Theme" uid="uid://doadapv0h7alf" path="res://Themes/main_theme.tres" id="1_qw3my"]
 [ext_resource type="Resource" uid="uid://b24ro6g0n3g35" path="res://Locations/test_location_stats.tres" id="2_oixok"]
 [ext_resource type="Texture2D" uid="uid://bh2647vw2p0q2" path="res://Assets/GroundTileTest.png" id="2_ytnli"]
-[ext_resource type="PackedScene" uid="uid://dut318p2cmvem" path="res://Scenes/location_stats_ui.tscn" id="5_n4oai"]
-[ext_resource type="Texture2D" uid="uid://bruepe62x4vvs" path="res://Assets/glow.png" id="10_himm2"]
+[ext_resource type="PackedScene" uid="uid://dut318p2cmvem" path="res://Scenes/Locations/location_stats_ui.tscn" id="5_n4oai"]
+[ext_resource type="StyleBox" uid="uid://cabopjeyxercb" path="res://Themes/card_hover_stylebox.tres" id="6_owc4a"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_5beuh"]
 size = Vector2(50.25, 50.25)
@@ -16,6 +16,7 @@ layout_mode = 3
 anchors_preset = 0
 size_flags_horizontal = 4
 size_flags_vertical = 4
+mouse_filter = 1
 script = ExtResource("1_pdsx0")
 location_stats = ExtResource("2_oixok")
 
@@ -35,23 +36,17 @@ theme_override_colors/font_color = Color(1, 1, 1, 1)
 theme_override_colors/font_shadow_color = Color(0.490196, 0.490196, 0.490196, 1)
 theme_override_colors/font_outline_color = Color(1, 1, 1, 1)
 theme_override_font_sizes/font_size = 40
-text = "3"
 
 [node name="Background" type="Sprite2D" parent="."]
 show_behind_parent = true
-scale = Vector2(10, 10)
+z_index = -1
+position = Vector2(1, 1)
+scale = Vector2(9.5, 9.5)
 texture = ExtResource("2_ytnli")
 centered = false
 
-[node name="Glow" type="Sprite2D" parent="."]
-visible = false
-show_behind_parent = true
-z_index = -1
-position = Vector2(25, 25)
-scale = Vector2(8.66667, 8.66667)
-texture = ExtResource("10_himm2")
-
 [node name="Area2D" type="Area2D" parent="."]
+collision_layer = 4
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
 position = Vector2(25.125, 25.125)
@@ -66,3 +61,19 @@ offset_right = 50.0
 offset_bottom = 50.0
 grow_horizontal = 1
 grow_vertical = 1
+
+[node name="Glow" type="Panel" parent="."]
+visible = false
+show_behind_parent = true
+z_index = -2
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+theme_override_styles/panel = ExtResource("6_owc4a")
+
+[connection signal="area_entered" from="Area2D" to="." method="_on_area_2d_area_entered"]
+[connection signal="area_exited" from="Area2D" to="." method="_on_area_2d_area_exited"]

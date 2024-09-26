@@ -1,12 +1,10 @@
-[gd_resource type="Resource" script_class="LocationStats" load_steps=4 format=3 uid="uid://b24ro6g0n3g35"]
+[gd_resource type="Resource" script_class="LocationStats" load_steps=2 format=3 uid="uid://b24ro6g0n3g35"]
 
-[ext_resource type="Resource" uid="uid://dbt4q4wty1aip" path="res://Factions/Gothic/Cards/Town.tres" id="1_om5x2"]
 [ext_resource type="Script" path="res://Custom_Resources/location_stats.gd" id="2_02183"]
-[ext_resource type="Resource" uid="uid://bcnhoj5466mcv" path="res://Factions/Gothic/Cards/Worker.tres" id="3_a5gsa"]
 
 [resource]
 script = ExtResource("2_02183")
 total_attack = 0
-units = []
-workers = [ExtResource("3_a5gsa"), ExtResource("3_a5gsa")]
-buildings = [ExtResource("1_om5x2")]
+units = Array[Resource("res://Custom_Resources/card.gd")]([])
+workers = Array[Resource("res://Custom_Resources/card.gd")]([])
+buildings = Array[Resource("res://Custom_Resources/card.gd")]([])

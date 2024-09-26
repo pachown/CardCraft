@@ -8,31 +8,17 @@ signal stats_changed
 @export var workers : Array[Card] = []
 @export var buildings: Array[Card] = []
 
-var attack = set_attack(units, true)
+var attack = set_attack()
 
-func set_attack(u, home):
+func set_attack():
 	var att_calc = 0
-	if home:
-		att_calc += 2
-	for i in u:
-		att_calc += u[i].Attack
+	for i in units:
+		att_calc += units[i].attack
+	for i in buildings:
+		att_calc += buildings[i].attack
 	attack = att_calc
-	stats_changed.emit()
+	stats_changed.emit(self)
 	
-func fight(attackers):
-	var attackers_att = 0
-	for i in attackers:
-		attackers_att += attackers[i].Attack
-	if attackers_att <= 2:
-		attackers.clear()
-		return
-	if attackers_att > attack:
-		location_death()
-	calculate_losses(attackers, units)
-
-func calculate_losses(enemyUnits, friendlyUnits):
-		var defense_advantage = 2
-
 func location_death():
 	units.clear()
 	buildings.clear()
@@ -40,5 +26,4 @@ func location_death():
 	
 func create_instance() -> Resource:
 	var instance: Stats = self.duplicate()
-	
 	return instance

@@ -16,3 +16,5 @@ speed = 0
 sprite = ExtResource("2_t4m2o")
 tooltip = "An archery field"
 target = 0
+owner = "Player"
+tooltip_text = ""

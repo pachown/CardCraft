@@ -3,5 +3,6 @@
 [ext_resource type="Texture2D" uid="uid://5eucyve4onis" path="res://Assets/GothicArt/Town.png" id="1_fb820"]
 
 [node name="LocationSprite" type="TextureRect"]
+mouse_filter = 2
 texture = ExtResource("1_fb820")
 expand_mode = 2

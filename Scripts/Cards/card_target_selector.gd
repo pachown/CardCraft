@@ -65,5 +65,4 @@ func _on_area_2d_area_entered(area: Area2D):
 func _on_area_2d_area_exited(area: Area2D):
 	if not current_card or not targeting:
 		return
-		
 	current_card.targets.erase(area)

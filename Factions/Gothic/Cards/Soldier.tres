@@ -16,3 +16,5 @@ speed = 1
 sprite = ExtResource("2_flgdh")
 tooltip = "A solid soidier"
 target = 1
+owner = "Player"
+tooltip_text = ""

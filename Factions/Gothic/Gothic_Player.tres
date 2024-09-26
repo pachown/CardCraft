@@ -1,0 +1,11 @@
+[gd_resource type="Resource" script_class="PlayerStats" load_steps=3 format=3 uid="uid://c3pa8w2smnvfr"]
+
+[ext_resource type="Script" path="res://Custom_Resources/player_stats.gd" id="1_5nef6"]
+[ext_resource type="Resource" uid="uid://cps6qfcrxjj6u" path="res://Factions/Gothic/Gothic_Starting_Deck.tres" id="2_3ae0o"]
+
+[resource]
+script = ExtResource("1_5nef6")
+starting_deck = ExtResource("2_3ae0o")
+cards_per_turn = 4
+max_gold = 2
+current_gold = 2

@@ -1,27 +1,6 @@
 class_name LocationStats
 extends Stats
-var town = preload("res://Factions/Gothic/Cards/Town.tres")
-var worker = preload("res://Factions/Gothic/Cards/Worker.tres")
-#
-#@export var starting_deck: CardPile
-#@export var cards_per_turn: int
-#@export var max_gold: int
-#
-#var gold: int: set = set_gold
-#var deck: CardPile
-#var discard: CardPile
-#var draw_pile: CardPile
 
-#func set_gold(value: int):
-#	gold = value
-#	stats_changed.emit()
-#
-#func reset_gold():
-#	self.gold = max_gold
-#
-#func can_play_card(card: Card) -> bool:
-#	return gold >= card.cost
-#
 func create_instance() -> Resource:
 	var instance: LocationStats = self.duplicate()
 #	instance.buildings = [town]
@@ -31,5 +10,5 @@ func create_instance() -> Resource:
 #	instance.draw_pile = CardPile.new()
 #	instance.discard = CardPile.new()
 	return instance
-	
+#
 

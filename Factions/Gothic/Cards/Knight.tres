@@ -16,3 +16,5 @@ speed = 2
 sprite = ExtResource("2_3jsnr")
 tooltip = "A knight in shining armour"
 target = 1
+owner = "Player"
+tooltip_text = ""

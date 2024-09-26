@@ -16,3 +16,5 @@ speed = 1
 sprite = ExtResource("2_5mxno")
 tooltip = "A worker "
 target = 2
+owner = "Player"
+tooltip_text = ""

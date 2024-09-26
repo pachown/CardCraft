@@ -16,3 +16,5 @@ speed = 4
 sprite = ExtResource("2_7qgww")
 tooltip = "A fast scout"
 target = 1
+owner = "Player"
+tooltip_text = ""

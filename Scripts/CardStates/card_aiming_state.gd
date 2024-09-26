@@ -3,7 +3,6 @@ extends CardState
 const MOUSE_Y_SNAPBACK_THRESHOLD := 1000
 
 func enter():
-	card_ui.card_name.text = "Draggin"
 	card_ui.targets.clear()
 	
 	var offset := Vector2(card_ui.parent.size.x / 2, -card_ui.size.y /2)

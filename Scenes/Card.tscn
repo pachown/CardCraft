@@ -1,13 +1,14 @@
-[gd_scene load_steps=11 format=3 uid="uid://0rkfkpas5cso"]
+[gd_scene load_steps=12 format=3 uid="uid://0rkfkpas5cso"]
 
 [ext_resource type="Theme" uid="uid://doadapv0h7alf" path="res://Themes/main_theme.tres" id="1_qwv8t"]
-[ext_resource type="Script" path="res://Scripts/card_ui.gd" id="2_d4u08"]
-[ext_resource type="Script" path="res://Scripts/card_state_machine.gd" id="4_gp0pp"]
+[ext_resource type="Script" path="res://Scripts/Cards/card_ui.gd" id="2_2wj5j"]
+[ext_resource type="Script" path="res://Scripts/CardStates/card_state_machine.gd" id="3_cciby"]
 [ext_resource type="Script" path="res://Scripts/CardStates/card_base_state.gd" id="5_2mma7"]
 [ext_resource type="Script" path="res://Scripts/CardStates/card_clicked_state.gd" id="6_488on"]
 [ext_resource type="Script" path="res://Scripts/CardStates/card_dragging_state.gd" id="7_faupt"]
 [ext_resource type="Script" path="res://Scripts/CardStates/card_released_state.gd" id="8_m62y3"]
-[ext_resource type="Script" path="res://Scripts/card_aiming_state.gd" id="9_ry0r7"]
+[ext_resource type="Script" path="res://Scripts/CardStates/card_aiming_state.gd" id="8_qto85"]
+[ext_resource type="StyleBox" uid="uid://b3bjdd3ewo8xu" path="res://Themes/card_base_stylebox.tres" id="9_ikwji"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_ed0so"]
 size = Vector2(300, 400)
@@ -29,20 +30,22 @@ grow_vertical = 2
 auto_translate = false
 localize_numeral_system = false
 theme = ExtResource("1_qwv8t")
-script = ExtResource("2_d4u08")
+script = ExtResource("2_2wj5j")
 metadata/_edit_use_anchors_ = true
 
 [node name="DropPointDetector" type="Area2D" parent="."]
-collision_mask = 2
+collision_mask = 4
 monitorable = false
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="DropPointDetector"]
+z_index = -100
 position = Vector2(150, 200)
 shape = SubResource("RectangleShape2D_ed0so")
 
-[node name="Sprite2D" type="Sprite2D" parent="."]
-modulate = Color(0.152941, 0.458824, 0.458824, 1)
-scale = Vector2(0.585938, 0.78125)
+[node name="CardImage" type="Sprite2D" parent="."]
+modulate = Color(0.65098, 0.627451, 0.666667, 1)
+position = Vector2(151, 89)
+scale = Vector2(0.25, 0.337)
 texture = SubResource("CompressedTexture2D_oji1s")
 centered = false
 
@@ -50,33 +53,27 @@ centered = false
 clip_contents = true
 layout_direction = 1
 layout_mode = 1
-anchors_preset = 13
-anchor_left = 0.5
-anchor_right = 0.5
-anchor_bottom = 1.0
-offset_left = -63.0
-offset_right = 63.0
-grow_horizontal = 2
+anchors_preset = 4
+anchor_top = 0.5
+anchor_bottom = 0.5
+offset_left = 6.0
+offset_top = -156.0
+offset_right = 126.0
+offset_bottom = 156.0
 grow_vertical = 2
 mouse_filter = 2
-metadata/_edit_use_anchors_ = true
 
 [node name="Name" type="Label" parent="TextContainer"]
 layout_mode = 2
+size_flags_horizontal = 4
 theme_override_font_sizes/font_size = 30
-text = "Name: Worker"
+text = "Worker"
 horizontal_alignment = 3
 
 [node name="Attack" type="Label" parent="TextContainer"]
 layout_mode = 2
 theme_override_font_sizes/font_size = 30
-text = "Attack: 1"
-horizontal_alignment = 3
-
-[node name="Defense" type="Label" parent="TextContainer"]
-layout_mode = 2
-theme_override_font_sizes/font_size = 30
-text = "Defense: 1"
+text = "Att: 1"
 horizontal_alignment = 3
 
 [node name="Cost" type="Label" parent="TextContainer"]
@@ -88,7 +85,7 @@ horizontal_alignment = 3
 [node name="Production" type="Label" parent="TextContainer"]
 layout_mode = 2
 theme_override_font_sizes/font_size = 30
-text = "Production: 0"
+text = "Prod: 1"
 horizontal_alignment = 3
 
 [node name="Speed" type="Label" parent="TextContainer"]
@@ -97,11 +94,8 @@ theme_override_font_sizes/font_size = 30
 text = "Speed: 2"
 horizontal_alignment = 3
 
-[node name="state" type="Label" parent="TextContainer"]
-layout_mode = 2
-
 [node name="CardStateMachine" type="Node" parent="." node_paths=PackedStringArray("initial_state")]
-script = ExtResource("4_gp0pp")
+script = ExtResource("3_cciby")
 initial_state = NodePath("CardBaseState")
 
 [node name="CardBaseState" type="Node" parent="CardStateMachine"]
@@ -120,8 +114,19 @@ script = ExtResource("8_m62y3")
 state = 4
 
 [node name="CardAimingState" type="Node2D" parent="CardStateMachine"]
-script = ExtResource("9_ry0r7")
+script = ExtResource("8_qto85")
 state = 3
+
+[node name="Panel" type="Panel" parent="."]
+show_behind_parent = true
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+theme_override_styles/panel = ExtResource("9_ikwji")
 
 [connection signal="gui_input" from="." to="." method="_on_gui_input"]
 [connection signal="mouse_entered" from="." to="." method="_on_mouse_entered"]

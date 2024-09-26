@@ -16,3 +16,5 @@ speed = 0
 sprite = ExtResource("2_txpm7")
 tooltip = "A stables fit for two horses"
 target = 0
+owner = "Player"
+tooltip_text = ""
